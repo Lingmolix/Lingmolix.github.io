@@ -1220,7 +1220,7 @@ pre code {
   vertical-align: middle;
 }
 .links-of-author a::before {
-  background: #8ce2e2;
+  background: #2fd1ff;
   display: inline-block;
   margin-right: 3px;
   transform: translateY(-2px);
@@ -2506,13 +2506,40 @@ header.header {
     left: 320px;
   }
 }
-/* 强制设置背景图，覆盖主题样式 */
 body {
   background: url("/images/5.jpg") no-repeat center fixed !important;
-  background-size: cover !important; /* 覆盖整个屏幕 */
+  background-size: cover !important;
 }
-/* 让内容区域半透明，避免遮挡背景（可选，根据喜好调整） */
 .main-inner {
-  background-color: rgba(255,255,255,0.8) !important; /* 白色80%透明 */
-  border-radius: 10px; /* 圆角边框，更美观 */
+  background-color: rgba(255,255,255,0.8) !important;
+  border-radius: 10px;
+}
+.post-body {
+  max-width: 85%;
+  padding: 0 2rem;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+@media (min-width: 768px) {
+  .post-body {
+    max-width: 90%;
+    padding: 0 3rem;
+  }
+}
+@media (max-width: 767px) {
+  .post-body {
+    max-width: 100%;
+    padding: 0 1.5rem;
+  }
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.post {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: box-shadow 0.3s ease;
+}
+.post:hover {
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
 }
