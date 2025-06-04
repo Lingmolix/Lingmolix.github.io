@@ -1220,7 +1220,7 @@ pre code {
   vertical-align: middle;
 }
 .links-of-author a::before {
-  background: #d00361;
+  background: #46f0ff;
   display: inline-block;
   margin-right: 3px;
   transform: translateY(-2px);
@@ -2505,4 +2505,14 @@ header.header {
   .sidebar-active .footer-fixed {
     left: 320px;
   }
+}
+/* 强制设置背景图，覆盖主题样式 */
+body {
+  background: url("/images/5.jpg") no-repeat center fixed !important;
+  background-size: cover !important; /* 覆盖整个屏幕 */
+}
+/* 让内容区域半透明，避免遮挡背景（可选，根据喜好调整） */
+.main-inner {
+  background-color: rgba(255,255,255,0.8) !important; /* 白色80%透明 */
+  border-radius: 10px; /* 圆角边框，更美观 */
 }
