@@ -1220,7 +1220,7 @@ pre code {
   vertical-align: middle;
 }
 .links-of-author a::before {
-  background: #1affff;
+  background: #cf03ab;
   display: inline-block;
   margin-right: 3px;
   transform: translateY(-2px);
@@ -2542,4 +2542,57 @@ body {
 }
 .post:hover {
   box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+}
+/* 菜单字体样式 */
+.menu-item {
+  font-size: 18px;
+  font-weight: bold;
+  color: #4285f4;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s;
+}
+.menu-item:hover {
+  color: #6cf;
+  transform: scale(1.05);
+}
+/* 背景图 + 半透明（关键修改！） */
+body {
+  background-color: rgba(255,255,255,0.7);
+  background-image: url("/images/5.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+/* 文章区域背景 */
+.main-inner {
+  background-color: rgba(255,255,255,0.8);
+  border-radius: 8px;
+  padding: 20px;
+}
+/* ========== 侧边栏背景（带半透明+可选毛玻璃） ========== */
+.sidebar {
+/* 方案1：半透明纯色层 + 背景图（推荐，兼容性好） */
+  background: linear-gradient(rgba(255,255,255,0.45), rgba(255,255,255,0.45)), url("/images/11.jpg") no-repeat center/cover;
+/* 背景图路径（放 source/images/ 里） */
+}
+/* ========== 侧边栏文字样式统一调整 ========== */
+.sidebar .menu-item,
+.sidebar .profile-info,
+.sidebar .stats,
+.sidebar .social-links a {
+  color: #000; /* 文字颜色  */
+  font-size: 14px; /* 字体大小 → 可调（默认14px） */
+  font-weight: 600; /* 字体加粗 → 600=中等粗，700=更粗 */
+  letter-spacing: 1px; /* 字符间距 → 增加呼吸感 */
+}
+/* ========== 菜单文字悬停特效（加分项） ========== */
+.sidebar .menu-item:hover {
+  color: #ffd700; /* 悬停变金色 → 颜色可改（比如 #ff6699 粉） */
+  transform: scale(1.1); /* 轻微放大 → 数值越大放大越明显 */
+  transition: all 0.3s; /* 过渡动画 → 让变化更丝滑 */
+}
+/* ========== 简介文字加阴影（避免和背景融合） ========== */
+.sidebar .profile-info {
+  text-shadow: 0 0 5px rgba(0,0,0,0.8); /* 黑色阴影 → 增强文字清晰度 */
 }
