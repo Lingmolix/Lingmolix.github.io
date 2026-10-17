@@ -1220,7 +1220,7 @@ pre code {
   vertical-align: middle;
 }
 .links-of-author a::before {
-  background: #eb6ac9;
+  background: #38cd94;
   display: inline-block;
   margin-right: 3px;
   transform: translateY(-2px);
@@ -2507,92 +2507,167 @@ header.header {
   }
 }
 body {
-  background: url("/images/5.jpg") no-repeat center fixed !important;
-  background-size: cover !important;
-}
-.main-inner {
-  background-color: rgba(255,255,255,0.8) !important;
-  border-radius: 10px;
-}
-.post-body {
-  max-width: 85%;
-  padding: 0 2rem;
-  margin: 0 auto;
-  box-sizing: border-box;
-}
-@media (min-width: 768px) {
-  .post-body {
-    max-width: 90%;
-    padding: 0 3rem;
-  }
-}
-@media (max-width: 767px) {
-  .post-body {
-    max-width: 100%;
-    padding: 0 1.5rem;
-  }
-}
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-.post {
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  transition: box-shadow 0.3s ease;
-}
-.post:hover {
-  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
-}
-/* 菜单字体样式 */
-.menu-item {
-  font-size: 18px;
-  font-weight: bold;
-  color: #4285f4;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  transition: all 0.3s;
-}
-.menu-item:hover {
-  color: #6cf;
-  transform: scale(1.05);
-}
-/* 背景图 + 半透明（关键修改！） */
-body {
-  background-color: rgba(255,255,255,0.7);
-  background-image: url("/images/5.jpg");
-  background-attachment: fixed;
-  background-position: center;
+  background: #f5f5f5 url("/images/5.jpg") no-repeat center fixed;
   background-size: cover;
 }
-/* 文章区域背景 */
 .main-inner {
   background-color: rgba(255,255,255,0.8);
+  border-radius: 10px;
+  box-sizing: border-box;
+  padding: 24px 32px 40px;
+}
+.post-body {
+  margin: 0 auto;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.posts-expand .post-block {
   border-radius: 8px;
-  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 24px;
 }
-/* ========== 侧边栏背景（带半透明+可选毛玻璃） ========== */
+.site-subtitle {
+  background: rgba(255,255,255,0.85);
+  border-radius: 4px;
+  color: #333;
+  display: table;
+  margin: 10px auto 0;
+  padding: 2px 8px;
+}
+.menu {
+  background: rgba(255,255,255,0.85);
+  border-radius: 8px;
+}
+.menu .menu-item a {
+  color: #4285f4;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+.menu .menu-item a:hover,
+.menu .menu-item a:focus-visible {
+  color: #1890ff;
+  transform: scale(1.03);
+}
+.site-brand-container .popup-trigger {
+  display: none;
+}
 .sidebar {
-/* 方案1：半透明纯色层 + 背景图（推荐，兼容性好） */
-  background: linear-gradient(rgba(255,255,255,0.45), rgba(255,255,255,0.45)), url("/images/11.jpg") no-repeat center/cover;
-/* 背景图路径（放 source/images/ 里） */
+  background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), url("/images/11.jpg") no-repeat center/cover;
 }
-/* ========== 侧边栏文字样式统一调整 ========== */
-.sidebar .menu-item,
-.sidebar .profile-info,
-.sidebar .stats,
-.sidebar .social-links a {
-  color: #000; /* 文字颜色  */
-  font-size: 14px; /* 字体大小 → 可调（默认14px） */
-  font-weight: 600; /* 字体加粗 → 600=中等粗，700=更粗 */
-  letter-spacing: 1px; /* 字符间距 → 增加呼吸感 */
+.sidebar .sidebar-inner,
+.sidebar .site-author-name,
+.sidebar .site-description,
+.sidebar .site-state-item-count,
+.sidebar .site-state-item-name {
+  color: #333;
 }
-/* ========== 菜单文字悬停特效（加分项） ========== */
-.sidebar .menu-item:hover {
-  color: #ffd700; /* 悬停变金色 → 颜色可改（比如 #ff6699 粉） */
-  transform: scale(1.1); /* 轻微放大 → 数值越大放大越明显 */
-  transition: all 0.3s; /* 过渡动画 → 让变化更丝滑 */
+.sidebar .site-description {
+  font-size: 14px;
+  font-weight: 600;
 }
-/* ========== 简介文字加阴影（避免和背景融合） ========== */
-.sidebar .profile-info {
-  text-shadow: 0 0 5px rgba(0,0,0,0.8); /* 黑色阴影 → 增强文字清晰度 */
+.sidebar a,
+.sidebar .sidebar-nav li {
+  border-bottom-color: #999;
+  color: #555;
+}
+.sidebar a:hover,
+.sidebar .sidebar-nav li:hover,
+.sidebar a:focus-visible,
+.sidebar .sidebar-nav li:focus-visible {
+  border-bottom-color: #1890ff;
+  color: #1890ff;
+}
+.sidebar .post-toc .nav .active > a,
+.sidebar .sidebar-toc-active .sidebar-nav-toc,
+.sidebar .sidebar-overview-active .sidebar-nav-overview {
+  border-bottom-color: #1890ff;
+  color: #1890ff;
+}
+.sidebar .links-of-author a i {
+  font-size: 1.2em;
+}
+.site-author-image {
+  border: 4px solid #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+.friends-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+.friend-card {
+  background: rgba(255,255,255,0.65);
+  border: 1px solid #eaeaea;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  min-width: 0;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+.friend-card:hover,
+.friend-card:focus-within {
+  transform: translateY(-5px);
+}
+.friend-card .friend-card-link {
+  border: 0;
+  box-sizing: border-box;
+  color: #333;
+  display: block;
+  height: 100%;
+  padding: 16px;
+}
+.friend-card .friend-card-link:focus-visible {
+  border-radius: 8px;
+  outline: 2px solid #1890ff;
+  outline-offset: 3px;
+}
+.friend-card img {
+  border-radius: 50%;
+  height: 100px;
+  margin-bottom: 12px;
+  object-fit: cover;
+  width: 100px;
+}
+.friend-card h3 {
+  font-size: 16px;
+  margin: 12px 0 8px;
+}
+.friend-card p {
+  color: #666;
+  font-size: 14px;
+  margin: 4px 0;
+  text-align: center;
+}
+.friend-card .friend-url {
+  color: #07c;
+  overflow-wrap: anywhere;
+}
+@media (max-width: 767px) {
+  body {
+    background-attachment: scroll;
+  }
+  .main-inner {
+    margin: 0 12px;
+    padding: 16px 12px 28px;
+  }
+  .posts-expand .post-block {
+    padding: 16px 12px;
+  }
+  .friends-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .menu .menu-item a,
+  .friend-card {
+    transition: none;
+  }
+  .menu .menu-item a:hover,
+  .friend-card:hover,
+  .menu .menu-item a:focus-within,
+  .friend-card:focus-within {
+    transform: none;
+  }
 }
